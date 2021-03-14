@@ -1,0 +1,88 @@
+.home {
+  height: 100vh;
+  background-color: $background;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content {
+  margin-left: 17em;
+}
+
+.hi {
+  color: $headline-font-color;
+  font-size: 8rem;
+  margin: 0;
+  animation: stumble 0.5s linear 2.5s 1;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  position: relative;
+}
+
+.intro {
+  color: $normal-font-color;
+  animation-delay: 2.9s !important;
+}
+
+.appear-from-right {
+  animation: appear 0.3s linear 2.5s 1;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  position: relative;
+}
+
+@keyframes appear {
+  from {
+    right: -35vw;
+    visibility: hidden;
+  }
+  to {
+    right: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes stumble {
+  0% {
+    right: -35vw;
+    visibility: hidden;
+    transform: rotate(30deg);
+  }
+  5% {
+    right: -30vw;
+    visibility: visible;
+    transform: rotate(30deg);
+  }
+  15% {
+    right: -25vw;
+    visibility: visible;
+    transform: rotate(30deg);
+  }
+  25% {
+    right: -20vw;
+    visibility: visible;
+    transform: rotate(30deg);
+  }
+  50% {
+    right: -10vw;
+    visibility: visible;
+    transform: rotate(30deg);
+  }
+  75% {
+    right: -5vw;
+    visibility: visible;
+    transform: rotate(30deg);
+  }
+  95% {
+    right: 0;
+    visibility: visible;
+    transform: rotate(30deg);
+  }
+  100% {
+    right: 0;
+    visibility: visible;
+    transform: rotate(0deg);
+  }
+}

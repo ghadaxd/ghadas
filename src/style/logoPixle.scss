@@ -1,0 +1,202 @@
+$tri-1: #f75929;
+$tri-2: #f47122;
+$tri-3: #ee8208;
+$tri-4: #fd9d09;
+$tri-5: #ffb80a;
+
+$dot: -1em -1em 0 0 $tri-5, -1em -2em 0 0 $tri-5, 2em -4em 0 0 $tri-5,
+  1em -4em 0 0 $tri-5, 1em -2em 0 1em $tri-5;
+$tri-down-1: 10em 1em 0 0 $tri-1, 10em 0 0 0 $tri-1, 11em -1em 0 0 $tri-1,
+  12em -2em 0 0 $tri-1, 13em -2em 0 0 $tri-1, 12em 0 0 1em $tri-1;
+$tri-up-2: 8em 0 0 0 $tri-2, 9em 0 0 0 $tri-2, 9em -2em 0 1em $tri-2,
+  11em -2em 0 0 $tri-2, 11em -3em 0 0 $tri-2;
+$tri-down-3: 4em 0 0 0 $tri-3, 6em -1em 0 1em $tri-3, 4em -1em 0 0 $tri-3,
+  6em -3em 0 0 $tri-3, 7em -3em 0 0 $tri-3;
+$tri-up-4: 7em 1em 0 0 $tri-4, 4em 4em 0 0 $tri-4, 5em 2em 0 1em $tri-4,
+  7em 2em 0 0 $tri-4, 5em 4em 0 0 $tri-4;
+$tri-down-5: 3em 1em 0 0 $tri-5, 2em 3em 0 1em $tri-5, 2em 1em 0 0 $tri-5,
+  0 3em 0 0 $tri-5, 0 4em 0 0 $tri-5;
+$tri-right-6: 1em 6em 0 1em $tri-1, 3em 5em 0 0 $tri-1, 3em 6em 0 0 $tri-1,
+  0 8em 0 0 $tri-1, 1em 8em 0 0 $tri-1;
+$tri-left-7: 1em 9em 0 0 $tri-2, 2em 8em 0 0 $tri-2, 3em 7em 0 0 $tri-2,
+  4em 6em 0 0 $tri-2, 3em 8em 0 1em $tri-2;
+$tri-right-8: 6em 7em 0 1em $tri-3, 8em 6em 0 0 $tri-3, 8em 7em 0 0 $tri-3,
+  5em 9em 0 0 $tri-3, 6em 9em 0 0 $tri-3;
+$tri-down-9: 6em 10em 0 0 $tri-4, 7em 9em 0 0 $tri-4, 8em 8em 0 0 $tri-4,
+  9em 7em 0 0 $tri-4, 8em 9em 0 1em $tri-4;
+$tri-down-10: 10em 10em 0 0 $tri-5, 11em 10em 0 0 $tri-5, 11em 8em 0 1em $tri-5,
+  13em 7em 0 0 $tri-5, 13em 8em 0 0 $tri-5;
+$tri-down-11: 11em 11em 0 0 $tri-1, 11em 12em 0 0 $tri-1, 9em 12em 0 1em $tri-1,
+  8em 14em 0 0 $tri-1, 9em 14em 0 0 $tri-1;
+$tri-up-12: 7em 11em 0 0 $tri-2, 6em 11em 0 0 $tri-2, 6em 13em 0 1em $tri-2,
+  4em 13em 0 0 $tri-2, 4em 14em 0 0 $tri-2;
+$tri-right-13: 9em 15em 0 0 $tri-3, 9em 16em 0 0 $tri-3, 7em 16em 0 1em $tri-3,
+  6em 18em 0 0 $tri-3, 7em 18em 0 0 $tri-3;
+$tri-down-14: 2em 18em 0 0 $tri-4, 2em 17em 0 0 $tri-4, 4em 15em 0 0 $tri-4,
+  5em 15em 0 0 $tri-4, 4em 17em 0 1em $tri-4;
+$tri-down-15: 2em 19em 0 0 $tri-5, 2em 20em 0 0 $tri-5, 5em 22em 0 0 $tri-5,
+  4em 22em 0 0 $tri-5, 4em 20em 0 1em $tri-5;
+$tri-up-16: 9em 20em 0 0 $tri-1, 9em 19em 0 0 $tri-1, 7em 20em 0 1em $tri-1,
+  6em 22em 0 0 $tri-1, 7em 22em 0 0 $tri-1;
+$tri-up-17: 10em 20em 0 0 $tri-2, 11em 20em 0 0 $tri-2, 10em 22em 0 1em $tri-2,
+  8em 22em 0 0 $tri-2, 8em 23em 0 0 $tri-2;
+$tri-up-18: 12em 20em 0 0 $tri-3, 13em 20em 0 0 $tri-3, 13em 22em 0 1em $tri-3,
+  15em 22em 0 0 $tri-3, 15em 23em 0 0 $tri-3;
+
+.logo-pixle {
+  position: absolute;
+  top: 35vh;
+  right: 58vw;
+  visibility: hidden;
+  animation: puzzle 2.5s 1;
+  animation-fill-mode: both;
+}
+
+@keyframes puzzle {
+  0% {
+    box-shadow: none;
+    visibility: visible;
+  }
+  5% {
+    box-shadow: $tri-down-1;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  10% {
+    box-shadow: $tri-down-1, $tri-up-2;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  15% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  20% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  25% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  30% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  35% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  40% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  45% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  50% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  55% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  60% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  65% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12, $tri-right-13;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  70% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12, $tri-right-13, $tri-down-14;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  75% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12, $tri-right-13, $tri-down-14, $tri-down-15;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  80% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12, $tri-right-13, $tri-down-14, $tri-down-15,
+      $tri-up-16;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  85% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12, $tri-right-13, $tri-down-14, $tri-down-15,
+      $tri-up-16, $tri-up-17;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  90% {
+    box-shadow: $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4, $tri-down-5,
+      $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9, $tri-down-10,
+      $tri-down-11, $tri-up-12, $tri-right-13, $tri-down-14, $tri-down-15,
+      $tri-up-16, $tri-up-17, $tri-up-18;
+    width: 1em;
+    height: 1em;
+    right: 58vw;
+  }
+  100% {
+    box-shadow: $dot, $tri-down-1, $tri-up-2, $tri-down-3, $tri-up-4,
+      $tri-down-5, $tri-right-6, $tri-left-7, $tri-right-8, $tri-down-9,
+      $tri-down-10, $tri-down-11, $tri-up-12, $tri-right-13, $tri-down-14,
+      $tri-down-15, $tri-up-16, $tri-up-17, $tri-up-18;
+    width: 1em;
+    height: 1em;
+    right: 76vw;
+    visibility: visible;
+  }
+}

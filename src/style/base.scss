@@ -1,0 +1,29 @@
+// Defines colors:
+$background: #fff;
+$elements-color: #ff8000;
+$headline-font-color: #ff8000;
+$normal-font-color: #828282;
+
+// Global vars
+$circle-radius: 10em;
+
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&display=swap");
+$font-name: "Cantarell", sans-serif;
+
+// Components style
+@import "./logoPixle.scss";
+@import "./home.scss";
+@import "./nav.scss";
+
+// App style
+body {
+  margin: 0;
+  font-family: $font-name;
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//     .App-logo {
+//       animation: App-logo-spin infinite 20s linear;
+//     }
+//   }
