@@ -8,7 +8,9 @@
 }
 
 .home-content {
-  margin-left: 17em;
+  //margin-left: 13em;
+  // border-left: $elements-color dotted 1px;
+  // padding-left: 4em;
 }
 
 .hi {
@@ -85,4 +87,20 @@
     visibility: visible;
     transform: rotate(0deg);
   }
+}
+
+/* For mobile  */
+@media (max-width: 450px) {
+}
+
+/* For tablet */
+@media (min-width: 700px) and (max-width: 890px) {
+}
+
+/* For desktop */
+@media (min-width: 891px) and (max-width: 1024px) {
+}
+
+/* For large screen */
+@media (min-width: 1225px) and (max-width: 1440px) {
 }
