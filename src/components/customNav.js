@@ -6,6 +6,7 @@ import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
+import Slide from "@material-ui/core/Slide";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -94,53 +95,55 @@ export const CustomNav = () => {
   };
 
   return (
-    <Grid
-      container
-      spacing={3}
-      className={classes.root}
-      alignContent="center"
-      justify="space-between"
-    >
-      <IconButton
-        aria-label="home"
-        onClick={() => handleClick("home", "primary")}
+    <Slide direction="up" in={true} timeout={1500} mountOnEnter unmountOnExit>
+      <Grid
+        container
+        spacing={3}
+        className={classes.root}
+        alignContent="center"
+        justify="space-between"
       >
-        <div className={classes.circleLogo} />
-      </IconButton>
+        <IconButton
+          aria-label="home"
+          onClick={() => handleClick("home", "primary")}
+        >
+          <div className={classes.circleLogo} />
+        </IconButton>
 
-      <span className={classes.divider} />
+        <span className={classes.divider} />
 
-      <IconButton
-        aria-label="about"
-        onClick={() => handleClick("about", "primary")}
-        color={aboutIcon}
-      >
-        <AssignmentIndIcon />
-      </IconButton>
+        <IconButton
+          aria-label="about"
+          onClick={() => handleClick("about", "primary")}
+          color={aboutIcon}
+        >
+          <AssignmentIndIcon />
+        </IconButton>
 
-      <IconButton
-        aria-label="projects"
-        onClick={() => handleClick("projects", "primary")}
-        color={projectsIcon}
-      >
-        <PhotoFilterIcon />
-      </IconButton>
+        <IconButton
+          aria-label="projects"
+          onClick={() => handleClick("projects", "primary")}
+          color={projectsIcon}
+        >
+          <PhotoFilterIcon />
+        </IconButton>
 
-      <IconButton
-        aria-label="learning"
-        onClick={() => handleClick("learning", "primary")}
-        color={learningIcon}
-      >
-        <AssignmentTurnedInIcon />
-      </IconButton>
+        <IconButton
+          aria-label="learning"
+          onClick={() => handleClick("learning", "primary")}
+          color={learningIcon}
+        >
+          <AssignmentTurnedInIcon />
+        </IconButton>
 
-      <IconButton
-        aria-label="contact"
-        onClick={() => handleClick("contact", "primary")}
-        color={contactIcon}
-      >
-        <AlternateEmailIcon />
-      </IconButton>
-    </Grid>
+        <IconButton
+          aria-label="contact"
+          onClick={() => handleClick("contact", "primary")}
+          color={contactIcon}
+        >
+          <AlternateEmailIcon />
+        </IconButton>
+      </Grid>
+    </Slide>
   );
 };
