@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/ghadas/static/js/main.fc0f140a.chunk.js",
+    "main.js.map": "/ghadas/static/js/main.fc0f140a.chunk.js.map",
+    "runtime-main.js": "/ghadas/static/js/runtime-main.d5734be5.js",
+    "runtime-main.js.map": "/ghadas/static/js/runtime-main.d5734be5.js.map",
+    "static/js/2.2efd495f.chunk.js": "/ghadas/static/js/2.2efd495f.chunk.js",
+    "static/js/2.2efd495f.chunk.js.map": "/ghadas/static/js/2.2efd495f.chunk.js.map",
+    "index.html": "/ghadas/index.html",
+    "precache-manifest.08d26aae56a8a8db3ecdaa069da23a43.js": "/ghadas/precache-manifest.08d26aae56a8a8db3ecdaa069da23a43.js",
+    "service-worker.js": "/ghadas/service-worker.js",
+    "static/js/2.2efd495f.chunk.js.LICENSE.txt": "/ghadas/static/js/2.2efd495f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5734be5.js",
+    "static/js/2.2efd495f.chunk.js",
+    "static/js/main.fc0f140a.chunk.js"
+  ]
+}
