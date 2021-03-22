@@ -1,5 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import PhotoFilterIcon from "@material-ui/icons/PhotoFilter";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
@@ -7,6 +8,7 @@ import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +67,10 @@ export const CustomNav = () => {
   const [contactIcon, setContactIcon] = React.useState("default");
   const [previous, setPrevious] = React.useState("home");
 
+  const theme = useTheme();
+  let matches = useMediaQuery(theme.breakpoints.down("xs"));
+  const placement = matches ? "top" : "left";
+
   const handleClick = (clicked, type) => {
     switch (clicked) {
       case "about":
@@ -103,46 +109,56 @@ export const CustomNav = () => {
         alignContent="center"
         justify="space-between"
       >
-        <IconButton
-          aria-label="home"
-          onClick={() => handleClick("home", "primary")}
-        >
-          <div className={classes.circleLogo} />
-        </IconButton>
+        <Tooltip title="Home 👋🏼" placement={placement} interactive>
+          <IconButton
+            aria-label="home"
+            onClick={() => handleClick("home", "primary")}
+          >
+            <div className={classes.circleLogo} />
+          </IconButton>
+        </Tooltip>
 
         <span className={classes.divider} />
 
-        <IconButton
-          aria-label="about"
-          onClick={() => handleClick("about", "primary")}
-          color={aboutIcon}
-        >
-          <AssignmentIndIcon />
-        </IconButton>
+        <Tooltip title="About 👩🏻‍💻" placement={placement} interactive>
+          <IconButton
+            aria-label="about"
+            onClick={() => handleClick("about", "primary")}
+            color={aboutIcon}
+          >
+            <AssignmentIndIcon />
+          </IconButton>
+        </Tooltip>
 
-        <IconButton
-          aria-label="projects"
-          onClick={() => handleClick("projects", "primary")}
-          color={projectsIcon}
-        >
-          <PhotoFilterIcon />
-        </IconButton>
+        <Tooltip title="Projects ✨" placement={placement} interactive>
+          <IconButton
+            aria-label="projects"
+            onClick={() => handleClick("projects", "primary")}
+            color={projectsIcon}
+          >
+            <PhotoFilterIcon />
+          </IconButton>
+        </Tooltip>
 
-        <IconButton
-          aria-label="learning"
-          onClick={() => handleClick("learning", "primary")}
-          color={learningIcon}
-        >
-          <AssignmentTurnedInIcon />
-        </IconButton>
+        <Tooltip title="Learning ✅" placement={placement} interactive>
+          <IconButton
+            aria-label="learning"
+            onClick={() => handleClick("learning", "primary")}
+            color={learningIcon}
+          >
+            <AssignmentTurnedInIcon />
+          </IconButton>
+        </Tooltip>
 
-        <IconButton
-          aria-label="contact"
-          onClick={() => handleClick("contact", "primary")}
-          color={contactIcon}
-        >
-          <AlternateEmailIcon />
-        </IconButton>
+        <Tooltip title="Contact 💁🏻‍♀️" placement={placement} interactive>
+          <IconButton
+            aria-label="contact"
+            onClick={() => handleClick("contact", "primary")}
+            color={contactIcon}
+          >
+            <AlternateEmailIcon />
+          </IconButton>
+        </Tooltip>
       </Grid>
     </Slide>
   );
