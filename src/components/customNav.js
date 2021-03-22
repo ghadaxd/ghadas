@@ -58,12 +58,40 @@ const useStyles = makeStyles((theme) => ({
 
 export const CustomNav = () => {
   const classes = useStyles();
-  // ** TODO: Change icon color when it's clicked **
-  // const [value, setValue] = React.useState("home");
+  const [aboutIcon, setAboutIcon] = React.useState("default");
+  const [projectsIcon, setProjectsIcon] = React.useState("default");
+  const [learningIcon, setLearningIcon] = React.useState("default");
+  const [contactIcon, setContactIcon] = React.useState("default");
+  const [previous, setPrevious] = React.useState("home");
 
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
+  const handleClick = (clicked, type) => {
+    switch (clicked) {
+      case "about":
+        setAboutIcon(type);
+        break;
+      case "projects":
+        setProjectsIcon(type);
+        break;
+      case "learning":
+        setLearningIcon(type);
+        break;
+      case "contact":
+        setContactIcon(type);
+        break;
+      default:
+        break;
+    }
+    type === "primary" && setPreviousIcon(clicked);
+  };
+
+  const setPreviousIcon = (clicked) => {
+    if (clicked === previous) {
+      return;
+    }
+    const preIcon = previous;
+    setPrevious(clicked);
+    handleClick(preIcon, "default");
+  };
 
   return (
     <Grid
@@ -73,25 +101,44 @@ export const CustomNav = () => {
       alignContent="center"
       justify="space-between"
     >
-      <IconButton aria-label="home">
+      <IconButton
+        aria-label="home"
+        onClick={() => handleClick("home", "primary")}
+      >
         <div className={classes.circleLogo} />
       </IconButton>
 
       <span className={classes.divider} />
 
-      <IconButton aria-label="about">
+      <IconButton
+        aria-label="about"
+        onClick={() => handleClick("about", "primary")}
+        color={aboutIcon}
+      >
         <AssignmentIndIcon />
       </IconButton>
 
-      <IconButton aria-label="projects">
+      <IconButton
+        aria-label="projects"
+        onClick={() => handleClick("projects", "primary")}
+        color={projectsIcon}
+      >
         <PhotoFilterIcon />
       </IconButton>
 
-      <IconButton aria-label="learning">
+      <IconButton
+        aria-label="learning"
+        onClick={() => handleClick("learning", "primary")}
+        color={learningIcon}
+      >
         <AssignmentTurnedInIcon />
       </IconButton>
 
-      <IconButton aria-label="contact">
+      <IconButton
+        aria-label="contact"
+        onClick={() => handleClick("contact", "primary")}
+        color={contactIcon}
+      >
         <AlternateEmailIcon />
       </IconButton>
     </Grid>

@@ -5,6 +5,7 @@ This project is my portfolio, where I showcase my awesome projects.
 ## Project stack
 
 - React JS framework.
+- [Material-UI](https://material-ui.com/)
 
 ## Used resources
 
