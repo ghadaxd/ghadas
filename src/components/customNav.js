@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.spacing(10),
     [theme.breakpoints.down("xs")]: {
       height: "3em",
+      marginBottom: theme.spacing(5),
     },
     [theme.breakpoints.up("sm")]: {
       flexDirection: "column",
@@ -32,19 +33,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url("./assets/Ghaa.png")`,
     backgroundSize: "cover",
   },
-  // circleLogoLg: {
-  //   border: `${theme.palette.primary.main} solid 1px`,
-  //   width: theme.spacing(12),
-  //   height: theme.spacing(12),
-  //   position: "absolute",
-  //   // right: "10vw",
-  //   // top: "8vh",
-  //   [theme.breakpoints.up("sm")]: {
-  //     top: "8vh",
-  //     //bottom: "38vh",
-  //     right: "13vw",
-  //   },
-  // },
   divider: {
     [theme.breakpoints.down("xs")]: {
       borderRight: `${theme.palette.primary.main} dotted 1px`,

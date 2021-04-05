@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flex: 1,
     minHeight: "80vh",
+    [theme.breakpoints.up("sm")]: {
+      minHeight: "100vh",
+      marginLeft: theme.spacing(8),
+    },
   },
   hi: {
     color: theme.palette.text.primary,
@@ -26,7 +30,6 @@ export const Home = () => {
       spacing={3}
       direction="column"
       justify="center"
-      alignContent="center"
       className={classes.root}
     >
       <Grid item>
