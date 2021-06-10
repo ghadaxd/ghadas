@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { App } from "./App";
 import * as serviceWorker from "./serviceWorker";
 import {
   createMuiTheme,
@@ -24,11 +24,9 @@ let theme = createMuiTheme({
 theme = responsiveFontSizes(theme);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
   document.getElementById("root")
 );
 

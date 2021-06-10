@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-// import Hidden from "@material-ui/core/Hidden";
 import Paper from "@material-ui/core/Paper";
-import { TriGSkills } from "../components/triGSkills";
+import Slide from "@material-ui/core/Slide";
 
+import { TriGSkills } from "../components/triGSkills";
 import logo from "../assets/Ghaa.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "80vh",
     [theme.breakpoints.up("sm")]: {
       minHeight: "100vh",
-      marginRight: theme.spacing(5),
+      marginRight: theme.spacing(8),
     },
     [theme.breakpoints.down("xs")]: {
       marginTop: theme.spacing(8),
@@ -41,6 +41,14 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `${theme.palette.primary.light} dotted "1px"`,
     paddingBottom: theme.spacing(2),
   },
+  aboutContainer: {
+    [theme.breakpoints.up("sm")]: {
+      marginRight: theme.spacing(8),
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(2),
+    },
+  },
   aboutPaper: {
     marginTop: theme.spacing(2),
     padding: theme.spacing(3),
@@ -51,16 +59,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     textAlign: "center",
   },
-  //   dividerVertical: {
-  //     height: "70vh",
-  //     borderRight: `${theme.palette.primary.light} dotted 1px`,
-  //   },
-  //   dividerHorizontal: {
-  //     width: "20vh",
-  //     borderTop: `${theme.palette.primary.light} dotted 1px`,
-  //     marginRight: theme.spacing(2),
-  //     marginLeft: theme.spacing(2),
-  //   },
 }));
 
 export const About = () => {
@@ -74,77 +72,73 @@ export const About = () => {
       alignItems="center"
       className={classes.root}
     >
-      <Grid
-        item
-        container
-        direction="column"
-        alignItems="center"
-        lg={4}
-        md={4}
-        sm={5}
-      >
-        {/* <Grow in={true} timeout={2000}> */}
-        <img src={logo} alt="My logo" className={classes.circleLogo} />
-        <Typography variant="h6" className={classes.name}>
-          Ghada Alaskar
-        </Typography>
-        <Typography variant="subtitle2" className={classes.title}>
-          Frontend Developer
-        </Typography>
-        <Paper className={classes.aboutPaper}>
-          <Typography className={classes.about} paragraph>
-            I'm Ghada, a frontend developer who’s driven by passion and purpose.{" "}
-            <span role="img" aria-label="charm">
-              ✨
-            </span>
-            <br />
-            <br />
-            I’ve spent almost four years learning, growing, and developing
-            projects.{" "}
-            <span role="img" aria-label="rock">
-              👩🏻‍💻
-            </span>
-            <br />
-            <br />I enjoy solving puzzles, coloring, and TEA.{" "}
-            <span role="img" aria-label="girl1">
-              💆🏻‍♀️
-            </span>
-            <br />
-            <br />
-            Always full of curiosity, seeking knowledge, reading, and growing.{" "}
-            <span role="img" aria-label="strong">
-              💪🏼
-            </span>
-            <br />
-            <br />
-            Twitter is my favorite mini-books, Google is my best mentor.{" "}
-            <span role="img" aria-label="info">
-              💁🏻‍♀️
-            </span>
-            <br />
-            <br />
-            Happy coding.{" "}
-            <span role="img" aria-label="girl2">
-              👩🏻‍💻
-            </span>
-            <span role="img" aria-label="heart">
-              🧡
-            </span>
+      <Slide direction="right" in={true} timeout={1500}>
+        <Grid
+          item
+          container
+          direction="column"
+          alignItems="center"
+          className={classes.aboutContainer}
+          lg={6}
+          md={4}
+          sm={4}
+        >
+          <img src={logo} alt="My logo" className={classes.circleLogo} />
+          <Typography variant="h6" className={classes.name}>
+            Ghada Alaskar
           </Typography>
-        </Paper>
-        {/* </Grow> */}
-      </Grid>
-      {/* <Grid>
-        <Hidden smDown>
-          <div className={classes.dividerVertical} />
-        </Hidden>
-        <Hidden lgUp>
-          <div className={classes.dividerHorizontal} />
-        </Hidden>
-      </Grid> */}
-      <Grid item>
-        <TriGSkills />
-      </Grid>
+          <Typography variant="subtitle2" className={classes.title}>
+            Frontend Developer
+          </Typography>
+          <Paper className={classes.aboutPaper}>
+            <Typography className={classes.about} paragraph>
+              I'm Ghada, a frontend developer who’s driven by passion and
+              purpose.{" "}
+              <span role="img" aria-label="charm">
+                ✨
+              </span>
+              <br />
+              <br />
+              I’ve spent almost four years learning, growing, and developing
+              projects.{" "}
+              <span role="img" aria-label="rock">
+                👩🏻‍💻
+              </span>
+              <br />
+              <br />I enjoy solving puzzles, coloring, and TEA.{" "}
+              <span role="img" aria-label="girl1">
+                💆🏻‍♀️
+              </span>
+              <br />
+              <br />
+              Always full of curiosity, seeking knowledge, reading, and growing.{" "}
+              <span role="img" aria-label="strong">
+                💪🏼
+              </span>
+              <br />
+              <br />
+              Twitter is my favorite mini-books, Google is my best mentor.{" "}
+              <span role="img" aria-label="info">
+                💁🏻‍♀️
+              </span>
+              <br />
+              <br />
+              Happy coding.{" "}
+              <span role="img" aria-label="girl2">
+                👩🏻‍💻
+              </span>
+              <span role="img" aria-label="heart">
+                🧡
+              </span>
+            </Typography>
+          </Paper>
+        </Grid>
+      </Slide>
+      <Slide direction="left" in={true} timeout={1500}>
+        <Grid item>
+          <TriGSkills />
+        </Grid>
+      </Slide>
     </Grid>
   );
 };
