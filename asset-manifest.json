@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.js": "/ghadas/static/js/main.92b65f37.chunk.js",
-    "main.js.map": "/ghadas/static/js/main.92b65f37.chunk.js.map",
-    "runtime-main.js": "/ghadas/static/js/runtime-main.d5734be5.js",
-    "runtime-main.js.map": "/ghadas/static/js/runtime-main.d5734be5.js.map",
-    "static/js/2.d8aa05ca.chunk.js": "/ghadas/static/js/2.d8aa05ca.chunk.js",
-    "static/js/2.d8aa05ca.chunk.js.map": "/ghadas/static/js/2.d8aa05ca.chunk.js.map",
+    "main.js": "/ghadas/static/js/main.e08ef9f8.chunk.js",
+    "main.js.map": "/ghadas/static/js/main.e08ef9f8.chunk.js.map",
+    "runtime-main.js": "/ghadas/static/js/runtime-main.6651a080.js",
+    "runtime-main.js.map": "/ghadas/static/js/runtime-main.6651a080.js.map",
+    "static/js/2.ac400b87.chunk.js": "/ghadas/static/js/2.ac400b87.chunk.js",
+    "static/js/2.ac400b87.chunk.js.map": "/ghadas/static/js/2.ac400b87.chunk.js.map",
     "index.html": "/ghadas/index.html",
-    "precache-manifest.f0307a3403c7e10b790f97f59879b5ef.js": "/ghadas/precache-manifest.f0307a3403c7e10b790f97f59879b5ef.js",
-    "service-worker.js": "/ghadas/service-worker.js",
-    "static/js/2.d8aa05ca.chunk.js.LICENSE.txt": "/ghadas/static/js/2.d8aa05ca.chunk.js.LICENSE.txt"
+    "static/js/2.ac400b87.chunk.js.LICENSE.txt": "/ghadas/static/js/2.ac400b87.chunk.js.LICENSE.txt",
+    "static/media/Ghaa.1e6eed7a.png": "/ghadas/static/media/Ghaa.1e6eed7a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d5734be5.js",
-    "static/js/2.d8aa05ca.chunk.js",
-    "static/js/main.92b65f37.chunk.js"
+    "static/js/runtime-main.6651a080.js",
+    "static/js/2.ac400b87.chunk.js",
+    "static/js/main.e08ef9f8.chunk.js"
   ]
 }
